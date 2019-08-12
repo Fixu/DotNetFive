@@ -31,7 +31,9 @@ namespace DotNetFive
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.Configure<Content>(Configuration.GetSection("Content"));
+            //services.Configure<Content>(Configuration.GetSection("Content"));
+            services.Configure<Content>(Configuration.GetSection("ContentList"));
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
